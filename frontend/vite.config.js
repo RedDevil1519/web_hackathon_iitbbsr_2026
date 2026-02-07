@@ -8,3 +8,4 @@ export default defineConfig({
     outDir: 'dist',
   },
 })
+npm run deploy
