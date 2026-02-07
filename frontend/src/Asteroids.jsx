@@ -8,8 +8,13 @@ export default function Asteroids({ setPositions }) {
 
   useEffect(()=>{
     const fetchData=async()=>{
-      const res=await axios.get("http://localhost:5000/api/live");
-      setList(res.data.slice(0,20));
+      try {
+        const res=await axios.get("http://localhost:5000/api/live");
+        setList(res.data.slice(0,20));
+      } catch (error) {
+        console.error("API not available, using fallback", error);
+        // Could add fallback mock data here for demo purposes
+      }
     };
     fetchData();
     const i=setInterval(fetchData,20000);

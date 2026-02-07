@@ -22,6 +22,14 @@ docker compose up --build
 - **Backend API:** http://localhost:5000  
 - **MongoDB:** localhost:27017  
 
+## GitHub Pages Deployment
+
+This app is automatically deployed to GitHub Pages on every push to `main`.
+
+**Live Demo:** https://reddevil1519.github.io/web_hackathon_iitbbsr_2026/
+
+Note: The live demo shows the frontend only. For full functionality including real-time NASA data and chat, run locally with Docker.  
+
 ## Run locally (without Docker)
 
 ### Backend
