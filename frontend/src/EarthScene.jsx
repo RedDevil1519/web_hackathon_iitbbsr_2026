@@ -18,7 +18,10 @@ export default function EarthScene() {
   const [positions,setPositions]=useState({});
 
   return (
-    <Canvas>
+    <Canvas 
+      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+      camera={{ position: [0, 5, 15], fov: 60 }}
+    >
       <ambientLight />
       <pointLight position={[10,10,10]} />
       <Earth />
